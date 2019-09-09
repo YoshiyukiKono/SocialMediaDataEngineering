@@ -22,8 +22,9 @@ with open(path, mode='w') as f:
   bool_first_line = True
   for row in json_list.rdd.collect():
     if bool_first_line:
-      f.write(",\n")
       bool_first_line = False
+    else:
+      f.write(",\n")
     print(row.message)
     #f.write(row.message.encode("utf-8"))
     f.write(row.message)
