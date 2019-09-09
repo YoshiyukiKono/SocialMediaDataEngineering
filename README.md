@@ -13,3 +13,10 @@
 ### 3. Json File Creation 
 * Create a json file for Sentiment Analysis
 * Use Spark on CDSW
+
+## Preparation
+
+* Load Libraries
+```
+!hdfs dfs -put lib/* /tmp/.
+```
