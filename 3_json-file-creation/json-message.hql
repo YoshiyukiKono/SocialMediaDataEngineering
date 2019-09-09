@@ -5,3 +5,5 @@ create table json_message (message STRING) STORED AS TEXTFILE;
 
 insert overwrite table json_message
 select to_json(named_struct('message_body', body, 'sentiment', sentiment)) from sentiment_data;
+
+select * from json_message;
